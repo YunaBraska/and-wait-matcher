@@ -6,9 +6,9 @@ Small hamcrest matcher which is waiting (with timeout) for the expected value
 ```java
     assertThat(this::receiveMessage, andWait(is(equalTo("Howdy"))));
 ```
-* use a hamcrest assertThat
-* first parameter will be a function to call until the expected value is present or timeout
-* you can even define your own timeout with a second parameter in the "andWait" matcher definition 
+* this matcher works with the default hamcrest "assertThat"
+* first parameter receives a function that will be called until the expected value is present (Success) or timeout (Exception) is received
+* you can define a custom timeout by using the second optional parameter of the "andWait" matcher 
 ```java
     assertThat(this::receiveMessage, andWait(is(equalTo("Howdy")), 500));
 ```
@@ -17,7 +17,7 @@ Small hamcrest matcher which is waiting (with timeout) for the expected value
 ```text
     Expected:
          but: [Timeout]
-    "Expected: is "unknown message"
+    Expected: is "unknown message"
          but: was "other message"
 ```
 
