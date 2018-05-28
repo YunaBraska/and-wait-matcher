@@ -37,14 +37,14 @@ Hamcrest matcher which is waiting (with timeout) for the expected value
 
 [License-Url]: https://www.apache.org/licenses/LICENSE-2.0
 [License-Image]: https://img.shields.io/badge/License-Apache2-blue.svg
-[github-release]: https://github.com/YunaBraska/AndWaitMatcher
-[Build-Status-Url]: https://travis-ci.org/YunaBraska/AndWaitMatcher
-[Build-Status-Image]: https://travis-ci.org/YunaBraska/AndWaitMatcher.svg?branch=master
-[Coverage-Url]: https://codecov.io/gh/YunaBraska/AndWaitMatcher?branch=master
-[Coverage-image]: https://codecov.io/gh/YunaBraska/AndWaitMatcher/branch/master/graphs/badge.svg
-[Version-url]: https://github.com/YunaBraska/AndWaitMatcher
-[Version-image]: https://badge.fury.io/gh/YunaBraska%2FAndWaitMatcher.svg
-[Maintainable-Url]: https://codeclimate.com/github/YunaBraska/AndWaitMatcher
-[Maintainable-image]: https://codeclimate.com/github/YunaBraska/AndWaitMatcher.svg
-[Javadoc-url]: https://github.com/YunaBraska/AndWaitMatcher
-[Javadoc-image]: http://javadoc.io/badge/github/YunaBraska/AndWaitMatcher.svg
+[github-release]: https://github.com/YunaBraska/and-wait-matcher
+[Build-Status-Url]: https://travis-ci.org/YunaBraska/and-wait-matcher
+[Build-Status-Image]: https://travis-ci.org/YunaBraska/and-wait-matcher.svg?branch=master
+[Coverage-Url]: https://codecov.io/gh/YunaBraska/and-wait-matcher?branch=master
+[Coverage-image]: https://codecov.io/gh/YunaBraska/and-wait-matcher/branch/master/graphs/badge.svg
+[Version-url]: https://github.com/YunaBraska/and-wait-matcher
+[Version-image]: https://badge.fury.io/gh/YunaBraska%2Fand-wait-matcher.svg
+[Maintainable-Url]: https://codeclimate.com/github/YunaBraska/and-wait-matcher
+[Maintainable-image]: https://codeclimate.com/github/YunaBraska/and-wait-matcher.svg
+[Javadoc-url]: https://github.com/YunaBraska/and-wait-matcher
+[Javadoc-image]: http://javadoc.io/badge/github/YunaBraska/and-wait-matcher.svg
