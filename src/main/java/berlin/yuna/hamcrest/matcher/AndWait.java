@@ -1,4 +1,4 @@
-package com.springfrosch.matcher;
+package berlin.yuna.hamcrest.matcher;
 
 
 import org.hamcrest.Description;
@@ -18,23 +18,10 @@ public class AndWait<T> extends TypeSafeDiagnosingMatcher<Supplier<T>> {
         long finalTime = System.currentTimeMillis() + timeoutMs;
         while (System.currentTimeMillis() < finalTime) {
             result = actual.get();
-            if (expected.matches(result)) {
-                return true;
-            } else {
-                try {
-                    Thread.sleep(100);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
-            }
+            if (matchesExpected(result)) return true;
         }
 
-        description
-                .appendText("[Timeout]\n")
-                .appendText("\nExpected: ")
-                .appendDescriptionOf(expected)
-                .appendText("\n     but: ");
-        expected.describeMismatch(result, description);
+        prepareDescription(description, result);
         return false;
     }
 
@@ -60,4 +47,25 @@ public class AndWait<T> extends TypeSafeDiagnosingMatcher<Supplier<T>> {
         this.timeoutMs = timeoutMs;
     }
 
+    private boolean matchesExpected(T actual) {
+        if (expected.matches(actual)) {
+            return true;
+        } else {
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        return false;
+    }
+
+    private void prepareDescription(Description description, T result) {
+        description
+                .appendText("[Timeout]\n")
+                .appendText("\nExpected: ")
+                .appendDescriptionOf(expected)
+                .appendText("\n     but: ");
+        expected.describeMismatch(result, description);
+    }
 }

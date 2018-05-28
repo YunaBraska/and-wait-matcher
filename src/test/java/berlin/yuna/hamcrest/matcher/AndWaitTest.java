@@ -1,12 +1,13 @@
-package com.springfrosch.matcher;
+package berlin.yuna.hamcrest.matcher;
 
+import org.hamcrest.StringDescription;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
 import java.util.Random;
 
-import static com.springfrosch.matcher.AndWait.andWait;
+import static berlin.yuna.hamcrest.matcher.AndWait.andWait;
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
@@ -24,21 +25,33 @@ public class AndWaitTest {
     }
 
     @Test
-    public void matcherShouldWait_AndFailWithTimeout() {
+    public void matcherShouldWait_withCustomTimeOut_shouldFailWithTimeout() {
         AssertionError assertionError = null;
         try {
             assertThat(this::receiveMessage, andWait(is(equalTo("unknown message")), 500));
         } catch (AssertionError ae) {
             assertionError = ae;
         } finally {
-            assertThat(assertionError, is(notNullValue()));
-            assertThat(assertionError.getMessage(), containsString("\n" +
-                    "Expected: \n" +
-                    "     but: [Timeout]\n" +
-                    "\n" +
-                    "Expected: is \"unknown message\"\n" +
-                    "     but: was \"other message\""));
+            assertTimeout(assertionError);
         }
+    }
+
+    @Test
+    public void matcherShouldWait_withDefaultTimeOut_shouldFailWithTimeout() {
+        AssertionError assertionError = null;
+        try {
+            assertThat(this::receiveMessage, andWait(is(equalTo("unknown message"))));
+        } catch (AssertionError ae) {
+            assertionError = ae;
+        } finally {
+            assertTimeout(assertionError);
+        }
+    }
+
+    @Test
+    public void instanceShouldWork() {
+        AndWait<String> andWait = new AndWait<>(is("howdy"));
+        andWait.matchesSafely(() -> "howdy", new StringDescription());
     }
 
     private String receiveMessage() {
@@ -53,5 +66,15 @@ public class AndWaitTest {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    private void assertTimeout(AssertionError assertionError) {
+        assertThat(assertionError, is(notNullValue()));
+        assertThat(assertionError.getMessage(), containsString("\n" +
+                "Expected: \n" +
+                "     but: [Timeout]\n" +
+                "\n" +
+                "Expected: is \"unknown message\"\n" +
+                "     but: was \"other message\""));
     }
 }

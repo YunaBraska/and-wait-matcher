@@ -4,31 +4,51 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.springfrosch</groupId>
+    <!-- FIXME: waiting until parent is on maven central available -->
+    <!--<parent>-->
+        <!--<groupId>berlin.yuna</groupId>-->
+        <!--<artifactId>maven-oss-parent</artifactId>-->
+        <!--<version>0.0.1</version>-->
+    <!--</parent>-->
+
+    <groupId>berlin.yuna</groupId>
     <artifactId>and-wait-matcher</artifactId>
     <version>1.0.0</version>
-
-    <name>AndWait Matcher</name>
-    <description>Small hamcrest matcher which is waiting (with timeout) for the expected value</description>
-
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>8</source>
+                    <target>8</target>
                 </configuration>
             </plugin>
         </plugins>
     </build>
+
+    <name>AndWait Matcher</name>
+    <description>Hamcrest matcher which is waiting (with timeout) for the expected value</description>
+    <url>${git-project.url}</url>
+
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <spring-boot.version>2.0.2.RELEASE</spring-boot.version>
+        <git-project.url>https://github.com/YunaBraska/AndWaitMatcher</git-project.url>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.hamcrest</groupId>
             <artifactId>hamcrest-core</artifactId>
             <version>1.3</version>
-            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -38,5 +58,10 @@
         </dependency>
     </dependencies>
 
+    <scm>
+        <connection>scm:git:${git-project.url}</connection>
+        <developerConnection>scm:git:${git-project.url}</developerConnection>
+        <url>${git-project.url}.git</url>
+    </scm>
 
 </project>
