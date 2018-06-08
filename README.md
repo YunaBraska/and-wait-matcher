@@ -3,9 +3,10 @@
 [![License][License-Image]][License-Url]
 [![Build][Build-Status-Image]][Build-Status-Url] 
 [![Coverage][Coverage-image]][Coverage-Url] 
-[![Version][Version-image]][Version-Url] 
 [![Maintainable][Maintainable-image]][Maintainable-Url] 
+[![Central][Central-image]][Central-Url] 
 [![Javadoc][javadoc-image]][javadoc-Url]
+[![Gitter][Gitter-image]][Gitter-Url] 
 
 ### Description
 Hamcrest matcher which is waiting (with timeout) for the expected value 
@@ -44,7 +45,11 @@ Hamcrest matcher which is waiting (with timeout) for the expected value
 [Coverage-image]: https://codecov.io/gh/YunaBraska/and-wait-matcher/branch/master/graphs/badge.svg
 [Version-url]: https://github.com/YunaBraska/and-wait-matcher
 [Version-image]: https://badge.fury.io/gh/YunaBraska%2Fand-wait-matcher.svg
+[Central-url]: https://search.maven.org/#search%7Cga%7C1%7Ca%3A%22and-wait-matcher%22
+[Central-image]: https://maven-badges.herokuapp.com/maven-central/berlin.yuna/and-wait-matcher/badge.svg
 [Maintainable-Url]: https://codeclimate.com/github/YunaBraska/and-wait-matcher
 [Maintainable-image]: https://codeclimate.com/github/YunaBraska/and-wait-matcher.svg
-[Javadoc-url]: https://github.com/YunaBraska/and-wait-matcher
-[Javadoc-image]: http://javadoc.io/badge/github/YunaBraska/and-wait-matcher.svg
+[Gitter-Url]: https://gitter.im/nats-streaming-server-embedded/Lobby
+[Gitter-image]: https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-brightgreen.svg
+[Javadoc-url]: http://javadoc.io/doc/berlin.yuna/and-wait-matcher
+[Javadoc-image]: http://javadoc.io/badge/berlin.yuna/and-wait-matcher.svg
