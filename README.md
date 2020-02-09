@@ -1,15 +1,40 @@
 # AndWait Matcher
+*Hamcrest matcher which is waiting (with timeout) for the expected value* 
 
-[![License][License-Image]][License-Url]
-[![Build][Build-Status-Image]][Build-Status-Url] 
-[![Coverage][Coverage-image]][Coverage-Url] 
-[![Maintainable][Maintainable-image]][Maintainable-Url] 
-[![Central][Central-image]][Central-Url] 
-[![Javadoc][javadoc-image]][javadoc-Url]
-[![Gitter][Gitter-image]][Gitter-Url] 
+![Build][Build-shield] 
+![[Maintainable][Maintainable-image]][Maintainable-Url]
+![Coverage][Coverage-shield]
+![Central][Central-shield] 
+![Tag][Tag-shield]
+![Issues][Issues-shield] 
+![Commit][Commit-shield] 
+![Size][Size-shield] 
+![Dependency][Dependency-shield]
+![License][License-shield]
+![Label][Label-shield]
 
-### Description
-Hamcrest matcher which is waiting (with timeout) for the expected value 
+[License-Url]: https://www.apache.org/licenses/LICENSE-2.0
+[Build-Status-Url]: https://travis-ci.org/YunaBraska/and-wait-matcher
+[Build-Status-Image]: https://travis-ci.org/YunaBraska/and-wait-matcher.svg?branch=master
+[Coverage-Url]: https://codecov.io/gh/YunaBraska/and-wait-matcher?branch=master
+[Coverage-image]: https://img.shields.io/codecov/c/github/YunaBraska/and-wait-matcher?style=flat-square
+[Maintainable-Url]: https://codeclimate.com/github/YunaBraska/and-wait-matcher/maintainability
+[Maintainable-image]: https://img.shields.io/codeclimate/maintainability/YunaBraska/and-wait-matcher?style=flat-square
+[Javadoc-url]: http://javadoc.io/doc/berlin.yuna/and-wait-matcher
+[Javadoc-image]: http://javadoc.io/badge/berlin.yuna/and-wait-matcher.svg
+[Gitter-Url]: https://gitter.im/nats-streaming-server-embedded/Lobby
+[Gitter-image]: https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-brightgreen.svg
+
+[Dependency-shield]: https://img.shields.io/librariesio/github/YunaBraska/and-wait-matcher?style=flat-square
+[Tag-shield]: https://img.shields.io/github/v/tag/YunaBraska/and-wait-matcher?style=flat-square
+[Central-shield]: https://img.shields.io/maven-central/v/berlin.yuna/and-wait-matcher?style=flat-square
+[Size-shield]: https://img.shields.io/github/repo-size/YunaBraska/and-wait-matcher?style=flat-square
+[Issues-shield]: https://img.shields.io/github/issues/YunaBraska/and-wait-matcher?style=flat-square
+[Coverage-shield]: https://img.shields.io/codecov/c/github/YunaBraska/and-wait-matcher?style=flat-square
+[License-shield]: https://img.shields.io/github/license/YunaBraska/and-wait-matcher?style=flat-square
+[Commit-shield]: https://img.shields.io/github/last-commit/YunaBraska/and-wait-matcher?style=flat-square
+[Label-shield]: https://img.shields.io/badge/Yuna-QueenInside-blueviolet?style=flat-square
+[Build-shield]: https://img.shields.io/travis/YunaBraska/and-wait-matcher/master?style=flat-square
 
 ### Usage
 ```java
@@ -35,21 +60,3 @@ Hamcrest matcher which is waiting (with timeout) for the expected value
 * Only one AssertionError description instead of having two descriptions - first is timeout and second is mismatch
 
 ![andwait](andwait.jpg "andwait")
-
-[License-Url]: https://www.apache.org/licenses/LICENSE-2.0
-[License-Image]: https://img.shields.io/badge/License-Apache2-blue.svg
-[github-release]: https://github.com/YunaBraska/and-wait-matcher
-[Build-Status-Url]: https://travis-ci.org/YunaBraska/and-wait-matcher
-[Build-Status-Image]: https://travis-ci.org/YunaBraska/and-wait-matcher.svg?branch=master
-[Coverage-Url]: https://codecov.io/gh/YunaBraska/and-wait-matcher?branch=master
-[Coverage-image]: https://codecov.io/gh/YunaBraska/and-wait-matcher/branch/master/graphs/badge.svg
-[Version-url]: https://github.com/YunaBraska/and-wait-matcher
-[Version-image]: https://badge.fury.io/gh/YunaBraska%2Fand-wait-matcher.svg
-[Central-url]: https://search.maven.org/#search%7Cga%7C1%7Ca%3A%22and-wait-matcher%22
-[Central-image]: https://maven-badges.herokuapp.com/maven-central/berlin.yuna/and-wait-matcher/badge.svg
-[Maintainable-Url]: https://codeclimate.com/github/YunaBraska/and-wait-matcher
-[Maintainable-image]: https://codeclimate.com/github/YunaBraska/and-wait-matcher.svg
-[Gitter-Url]: https://gitter.im/nats-streaming-server-embedded/Lobby
-[Gitter-image]: https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-brightgreen.svg
-[Javadoc-url]: http://javadoc.io/doc/berlin.yuna/and-wait-matcher
-[Javadoc-image]: http://javadoc.io/badge/berlin.yuna/and-wait-matcher.svg
