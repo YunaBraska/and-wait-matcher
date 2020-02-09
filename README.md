@@ -2,7 +2,7 @@
 *Hamcrest matcher which is waiting (with timeout) for the expected value* 
 
 ![Build][Build-shield] 
-![[Maintainable][Maintainable-image]][Maintainable-Url]
+[![Maintainable][Maintainable-image]][Maintainable-Url]
 ![Coverage][Coverage-shield]
 ![Central][Central-shield] 
 ![Tag][Tag-shield]
