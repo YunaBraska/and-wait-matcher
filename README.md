@@ -35,7 +35,7 @@
 
 ### TODO
 * Feature instead of Thread.sleep(XY)
-* Only one AssertionError description instead of having two descriptions - first is timeout and second is mismatch
+* Only one AssertionError description instead of having two descriptions - first is a timeout and second is mismatch
 
 ![andwait](andwait.jpg "andwait")
 

@@ -19,12 +19,12 @@ public class AndWaitTest {
     private static final Random random = new Random(10);
 
     @Test
-    public void matcherShouldWait_UntilTheFunctionReturnsExpectedValue() {
+    void matcherShouldWait_UntilTheFunctionReturnsExpectedValue() {
         assertThat(this::receiveMessage, andWait(is(equalTo("Howdy"))));
     }
 
     @Test
-    public void matcherShouldWait_withCustomTimeOut_shouldFailWithTimeout() {
+    void matcherShouldWait_withCustomTimeOut_shouldFailWithTimeout() {
         AssertionError assertionError = null;
         try {
             assertThat(this::receiveMessage, andWait(is(equalTo("unknown message")), 500));
@@ -36,7 +36,7 @@ public class AndWaitTest {
     }
 
     @Test
-    public void matcherShouldWait_withDefaultTimeOut_shouldFailWithTimeout() {
+    void matcherShouldWait_withDefaultTimeOut_shouldFailWithTimeout() {
         AssertionError assertionError = null;
         try {
             assertThat(this::receiveMessage, andWait(is(equalTo("unknown message"))));
@@ -48,7 +48,7 @@ public class AndWaitTest {
     }
 
     @Test
-    public void instanceShouldWork() {
+    void instanceShouldWork() {
         AndWait<String> andWait = new AndWait<>(is("howdy"));
         andWait.matchesSafely(() -> "howdy", new StringDescription());
     }
@@ -61,7 +61,7 @@ public class AndWaitTest {
 
     private void sleep() {
         try {
-            Thread.sleep((long) 10);
+            Thread.sleep(10);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

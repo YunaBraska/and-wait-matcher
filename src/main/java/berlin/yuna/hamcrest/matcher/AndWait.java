@@ -9,8 +9,8 @@ import java.util.function.Supplier;
 
 public class AndWait<T> extends TypeSafeDiagnosingMatcher<Supplier<T>> {
 
-    private Matcher<T> expected;
-    private int timeoutMs;
+    private final Matcher<T> expected;
+    private final int timeoutMs;
 
     @Override
     protected boolean matchesSafely(final Supplier<T> actual, final Description description) {
