@@ -1,9 +1,8 @@
 package berlin.yuna.hamcrest.matcher;
 
 import org.hamcrest.StringDescription;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.JUnit4;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
 
 import java.util.Random;
 
@@ -14,7 +13,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-@RunWith(JUnit4.class)
+@Tag("UnitTest")
 public class AndWaitTest {
 
     private static final Random random = new Random(10);

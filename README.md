@@ -1,5 +1,5 @@
 # AndWait Matcher
-*Hamcrest matcher which is waiting (with timeout) for the expected value* 
+*Hamcrest matcher which is waiting (with a timeout) for the expected value* 
 
 [![Build][build_shield]][build_link]
 [![Maintainable][maintainable_shield]][maintainable_link]
@@ -13,31 +13,6 @@
 [![Javadoc][javadoc_shield]][javadoc_link]
 [![Size][size_shield]][size_shield]
 ![Label][label_shield]
-
-[build_shield]: https://img.shields.io/travis/YunaBraska/and-wait-matcher/master?style=flat-square
-[build_link]: https://travis-ci.org/YunaBraska/and-wait-matcher
-[maintainable_shield]: https://img.shields.io/codeclimate/maintainability/YunaBraska/and-wait-matcher?style=flat-square
-[maintainable_link]: https://codeclimate.com/github/YunaBraska/and-wait-matcher/maintainability
-[coverage_shield]: https://img.shields.io/codecov/c/github/YunaBraska/and-wait-matcher?style=flat-square
-[coverage_link]: https://codecov.io/gh/YunaBraska/and-wait-matcher?branch=master
-[issues_shield]: https://img.shields.io/github/issues/YunaBraska/and-wait-matcher?style=flat-square
-[issues_link]: https://github.com/YunaBraska/and-wait-matcher/commits/master
-[commit_shield]: https://img.shields.io/github/last-commit/YunaBraska/and-wait-matcher?style=flat-square
-[commit_link]: https://github.com/YunaBraska/and-wait-matcher/issues
-[license_shield]: https://img.shields.io/github/license/YunaBraska/and-wait-matcher?style=flat-square
-[license_link]: https://github.com/YunaBraska/and-wait-matcher/blob/master/LICENSE
-[dependency_shield]: https://img.shields.io/librariesio/github/YunaBraska/and-wait-matcher?style=flat-square
-[dependency_link]: https://libraries.io/github/YunaBraska/and-wait-matcher
-[central_shield]: https://img.shields.io/maven-central/v/berlin.yuna/and-wait-matcher?style=flat-square
-[central_link]:https://search.maven.org/artifact/berlin.yuna/and-wait-matcher
-[tag_shield]: https://img.shields.io/github/v/tag/YunaBraska/and-wait-matcher?style=flat-square
-[tag_link]: https://github.com/YunaBraska/and-wait-matcher/releases
-[javadoc_shield]: https://javadoc.io/badge2/berlin.yuna/and-wait-matcher/javadoc.svg?style=flat-square
-[javadoc_link]: https://javadoc.io/doc/berlin.yuna/and-wait-matcher
-[size_shield]: https://img.shields.io/github/repo-size/YunaBraska/and-wait-matcher?style=flat-square
-[label_shield]: https://img.shields.io/badge/Yuna-QueenInside-blueviolet?style=flat-square
-[gitter_shield]: https://img.shields.io/gitter/room/YunaBraska/nats-streaming-server-embedded?style=flat-square
-[gitter_link]: https://gitter.im/nats-streaming-server-embedded/Lobby
 
 ### Usage
 ```java
@@ -63,3 +38,28 @@
 * Only one AssertionError description instead of having two descriptions - first is timeout and second is mismatch
 
 ![andwait](andwait.jpg "andwait")
+
+[build_shield]: https://github.com/YunaBraska/and-wait-matcher/workflows/JAVA_CI/badge.svg
+[build_link]: https://github.com/YunaBraska/and-wait-matcher/actions?query=workflow%3AJAVA_CI
+[maintainable_shield]: https://img.shields.io/codeclimate/maintainability/YunaBraska/and-wait-matcher?style=flat-square
+[maintainable_link]: https://codeclimate.com/github/YunaBraska/and-wait-matcher/maintainability
+[coverage_shield]: https://img.shields.io/codeclimate/coverage/YunaBraska/and-wait-matcher?style=flat-square
+[coverage_link]: https://codeclimate.com/github/YunaBraska/and-wait-matcher/test_coverage
+[issues_shield]: https://img.shields.io/github/issues/YunaBraska/and-wait-matcher?style=flat-square
+[issues_link]: https://github.com/YunaBraska/and-wait-matcher/commits/master
+[commit_shield]: https://img.shields.io/github/last-commit/YunaBraska/and-wait-matcher?style=flat-square
+[commit_link]: https://github.com/YunaBraska/and-wait-matcher/issues
+[license_shield]: https://img.shields.io/github/license/YunaBraska/and-wait-matcher?style=flat-square
+[license_link]: https://github.com/YunaBraska/and-wait-matcher/blob/master/LICENSE
+[dependency_shield]: https://img.shields.io/librariesio/github/YunaBraska/and-wait-matcher?style=flat-square
+[dependency_link]: https://libraries.io/github/YunaBraska/and-wait-matcher
+[central_shield]: https://img.shields.io/maven-central/v/berlin.yuna/and-wait-matcher?style=flat-square
+[central_link]:https://search.maven.org/artifact/berlin.yuna/and-wait-matcher
+[tag_shield]: https://img.shields.io/github/v/tag/YunaBraska/and-wait-matcher?style=flat-square
+[tag_link]: https://github.com/YunaBraska/and-wait-matcher/releases
+[javadoc_shield]: https://javadoc.io/badge2/berlin.yuna/and-wait-matcher/javadoc.svg?style=flat-square
+[javadoc_link]: https://javadoc.io/doc/berlin.yuna/and-wait-matcher
+[size_shield]: https://img.shields.io/github/repo-size/YunaBraska/and-wait-matcher?style=flat-square
+[label_shield]: https://img.shields.io/badge/Yuna-QueenInside-blueviolet?style=flat-square
+[gitter_shield]: https://img.shields.io/gitter/room/YunaBraska/nats-streaming-server-embedded?style=flat-square
+[gitter_link]: https://gitter.im/nats-streaming-server-embedded/Lobby
