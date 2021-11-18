@@ -15,7 +15,7 @@ public class AndWait<T> extends TypeSafeDiagnosingMatcher<Supplier<T>> {
     @Override
     protected boolean matchesSafely(final Supplier<T> actual, final Description description) {
         T result = null;
-        long finalTime = System.currentTimeMillis() + timeoutMs;
+        final long finalTime = System.currentTimeMillis() + timeoutMs;
         while (System.currentTimeMillis() < finalTime) {
             result = actual.get();
             if (matchesExpected(result)) return true;
@@ -47,7 +47,7 @@ public class AndWait<T> extends TypeSafeDiagnosingMatcher<Supplier<T>> {
         this.timeoutMs = timeoutMs;
     }
 
-    private boolean matchesExpected(T actual) {
+    private boolean matchesExpected(final T actual) {
         if (expected.matches(actual)) {
             return true;
         } else {
@@ -60,7 +60,7 @@ public class AndWait<T> extends TypeSafeDiagnosingMatcher<Supplier<T>> {
         return false;
     }
 
-    private void prepareDescription(Description description, T result) {
+    private void prepareDescription(final Description description, final T result) {
         description
                 .appendText("[Timeout]\n")
                 .appendText("\nExpected: ")

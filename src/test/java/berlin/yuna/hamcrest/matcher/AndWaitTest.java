@@ -14,7 +14,7 @@ import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 @Tag("UnitTest")
-public class AndWaitTest {
+class AndWaitTest {
 
     private static final Random random = new Random(10);
 
@@ -49,13 +49,13 @@ public class AndWaitTest {
 
     @Test
     void instanceShouldWork() {
-        AndWait<String> andWait = new AndWait<>(is("howdy"));
+        final AndWait<String> andWait = new AndWait<>(is("howdy"));
         andWait.matchesSafely(() -> "howdy", new StringDescription());
     }
 
     private String receiveMessage() {
         sleep();
-        int messageId = random.nextInt(50);
+        final int messageId = random.nextInt(50);
         return (messageId == 5 ? "Howdy" : "other message");
     }
 
@@ -67,7 +67,7 @@ public class AndWaitTest {
         }
     }
 
-    private void assertTimeout(AssertionError assertionError) {
+    private void assertTimeout(final AssertionError assertionError) {
         assertThat(assertionError, is(notNullValue()));
         assertThat(assertionError.getMessage(), containsString("\n" +
                 "Expected: \n" +
