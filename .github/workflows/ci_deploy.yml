@@ -21,8 +21,10 @@ jobs:
           java-version: 8
           distribution: 'adopt'
           server-id: ossrh
-          server-username: MAVEN_USERNAME
-          server-password: MAVEN_PASSWORD
+          server-username: OSSRH_USERNAME
+          server-password: OSSRH_TOKEN
+          gpg-private-key: ${{ secrets.GPG_SIGNING_KEY }} # Value of the GPG private key to import
+          gpg-passphrase: MAVEN_GPG_PASSPHRASE
       - name: Maven compile and update dependencies
         run: |
           ./mvnw -B -N io.takari:maven:wrapper
@@ -55,19 +57,13 @@ jobs:
         run: |
           git fetch origin release:release &>/dev/null || true
           if git rev-parse --verify "release" &>/dev/null; then echo "::set-env name=HAS_RELEASE_BRANCH::true"; fi
-      - name: Import GPG key
-        if: env.HAS_RELEASE_BRANCH == 'true'
-        id: import_gpg
-        uses: crazy-max/ghaction-import-gpg@v4
-        with:
-          gpg-private-key: ${{ secrets.GPG_SIGNING_KEY }}
-          passphrase: ${{ secrets.GPG_PASSPHRASE }}
       - name: Publish package
         if: env.HAS_RELEASE_BRANCH == 'true'
         run: mvn -B clean deploy -P release -Dmaven.test.skip=true -Dgpg.passphrase="${{ secrets.GPG_PASSPHRASE }}"
         env:
-          MAVEN_USERNAME: ${{ secrets.OSSH_USER }}
-          MAVEN_PASSWORD: ${{ secrets.OSSH_PASS }}
+          OSSRH_USERNAME: ${{ secrets.OSSH_USER }}
+          OSSRH_TOKEN: ${{ secrets.OSSH_PASS }}
+          MAVEN_GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
       - name: "[Release] Get latest tag"
         id: latest_tag
         run: |
