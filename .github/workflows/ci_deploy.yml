@@ -20,16 +20,16 @@ jobs:
         with:
           java-version: 8
           distribution: 'adopt'
-          server-id: ossrh
+
           server-username: OSSRH_USERNAME
           server-password: OSSRH_TOKEN
           gpg-private-key: ${{ secrets.GPG_SIGNING_KEY }} # Value of the GPG private key to import
-          gpg-passphrase: MAVEN_GPG_PASSPHRASE
-      - name: Maven compile and update dependencies
+          gpg-passphrase: MAVEN_GPG_PASSPHRASE      - name: Maven compile and update dependencies
         run: |
           ./mvnw -B -N io.takari:maven:wrapper
           ./mvnw -B -q versions:update-properties -DgenerateBackupPoms=false
           ./mvnw -B -q clean verify -Dmaven.test.skip=true
+          ./mvnw -B -q dependency:resolve-plugins -Dmaven.test.skip=true
       - name: Run tests
         run: ./mvnw -B clean verify
       - name: Publish code quality
@@ -57,6 +57,9 @@ jobs:
         run: |
           git fetch origin release:release &>/dev/null || true
           if git rev-parse --verify "release" &>/dev/null; then echo "::set-env name=HAS_RELEASE_BRANCH::true"; fi
+      - name: Import GPG key
+        if: env.HAS_RELEASE_BRANCH == 'true'
+        id: import_gpg
       - name: Publish package
         if: env.HAS_RELEASE_BRANCH == 'true'
         run: mvn -B clean deploy -P release -Dmaven.test.skip=true -Dgpg.passphrase="${{ secrets.GPG_PASSPHRASE }}"
