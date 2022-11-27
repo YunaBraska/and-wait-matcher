@@ -13,6 +13,7 @@
 [![Javadoc][javadoc_shield]][javadoc_link]
 [![Size][size_shield]][size_shield]
 ![Label][label_shield]
+![Label][java_version]
 
 ### Usage
 ```java
@@ -63,3 +64,4 @@
 [label_shield]: https://img.shields.io/badge/Yuna-QueenInside-blueviolet?style=flat-square
 [gitter_shield]: https://img.shields.io/gitter/room/YunaBraska/nats-streaming-server-embedded?style=flat-square
 [gitter_link]: https://gitter.im/nats-streaming-server-embedded/Lobby
+[java_version]: https://img.shields.io/badge/java-17-blueviolet?style=flat-square
