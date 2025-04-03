@@ -6,7 +6,7 @@
 
     <groupId>berlin.yuna</groupId>
     <artifactId>and-wait-matcher</artifactId>
-    <version>1.3.67</version>
+    <version>1.3.68</version>
 
     <name>AndWait Matcher</name>
     <description>Hamcrest matcher which is waiting (with timeout) for the expected value</description>
@@ -40,7 +40,7 @@
         <command-line-util.version>0.0.4</command-line-util.version>
         <junit-jupiter-api.version>5.12.1</junit-jupiter-api.version>
         <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
-        <jacoco-maven-plugin.version>0.8.12</jacoco-maven-plugin.version>
+        <jacoco-maven-plugin.version>0.8.13</jacoco-maven-plugin.version>
         <maven-javadoc-plugin.version>3.1.0</maven-javadoc-plugin.version>
         <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
         <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
