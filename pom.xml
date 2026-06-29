@@ -6,7 +6,7 @@
 
     <groupId>berlin.yuna</groupId>
     <artifactId>and-wait-matcher</artifactId>
-    <version>2026.06.1570550</version>
+    <version>2026.06.1800640</version>
 
     <name>AndWait Matcher</name>
     <description>Hamcrest matcher which is waiting (with timeout) for the expected value</description>
@@ -45,8 +45,8 @@
         <command-line-util.version>0.0.4</command-line-util.version>
 
         <!-- TEST -->
-        <junit.version>6.1.0</junit.version>
-        <junit-launcher.version>6.1.0</junit-launcher.version>
+        <junit.version>6.1.1</junit.version>
+        <junit-launcher.version>6.1.1</junit-launcher.version>
 
         <!-- BUILD -->
         <maven-gpg-plugin.version>3.2.7</maven-gpg-plugin.version>
